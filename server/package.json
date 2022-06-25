@@ -1,6 +1,9 @@
 {
   "name": "graphql-express",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.8.0"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
