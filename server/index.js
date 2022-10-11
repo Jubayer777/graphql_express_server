@@ -14,14 +14,11 @@ const roleGurd = require("./middleware/roleGurd");
 const graphqlHTTP = require("express-graphql").graphqlHTTP;
 
 app.use(bodyParser.json());
-// app.use(cors());
-app.use(
-  cors({
+const corsOptions={
     origin: ['https://graphql-client-cyan.vercel.app/', 'http://localhost:3000/'],
     credentials: true,
-    methods: ['GET', 'POST', 'PUT'],
-  })
-)
+  }
+server.applyMiddleware({ app, cors: corsOptions });
 
 app.use(isAuth);
 app.use(roleGurd);
