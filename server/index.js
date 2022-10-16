@@ -14,12 +14,12 @@ const roleGurd = require("./middleware/roleGurd");
 const graphqlHTTP = require("express-graphql").graphqlHTTP;
 
 app.use(bodyParser.json());
-  app.use(cors(
-    {
-          origin:'*',
-          credentials: true,
-    }
-  ));
+app.use(cors(
+  {
+        origin:'*',
+        credentials: true,
+  }
+));
 
 
 app.use(isAuth);
