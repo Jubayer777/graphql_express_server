@@ -16,7 +16,7 @@ const graphqlHTTP = require("express-graphql").graphqlHTTP;
 app.use(bodyParser.json());
 app.use(cors(
   {
-    "origin": "*",
+    "origin": "https://graphql-client-cyan.vercel.app/",
     "preflightContinue": false
   }
 ));
